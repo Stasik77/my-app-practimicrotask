@@ -1,35 +1,29 @@
-import NewComponent from "./NewComponent";
-
-
-
+import React from "react";
+import {Button} from "./components/Button";
+import {releaseAllKeys} from "@testing-library/user-event/dist/keyboard/keyboardImplementation";
 
 
 function App() {
-    // const [students, setStudents] = useState([
-    //         {id: 1, name: "James", age: 8},
-    //         {id: 2, name: "Robert", age: 18},
-    //         {id: 3, name: "John", age: 28},
-    //         {id: 4, name: "Michael", age: 38},
-    //         {id: 5, name: "William", age: 48},
-    //         {id: 6, name: "David", age: 58},
-    //         {id: 7, name: "Richard", age: 68},
-    //         {id: 8, name: "Joseph", age: 78},
-    //         {id: 9, name: "Thomas", age: 88},
-    //         {id: 10, name: "Charles", age: 98},
-    //         {id: 11, name: "Christopher", age: 100},
-    //     ]
-    // )
 
-
+    const Button1Foo = (name: string,age:number,secondName:string) => {
+        console.log(name,age,secondName)
+    }
+    const Button2Foo = (name: string,age:number) => {
+        console.log(name,age)
+    }
+      const Button3Foo = () => {
+        console.log("iam stupedd")
 
 
     return (
-<>
-    <NewComponent />
+        <>
+            <Button name={"YouTubeChanel1"} callBack={()=>Button1Foo("Vasia",21,"semenov")}/>
+            <Button name={"YouTubeChanel2"} callBack={()=>Button2Foo("Timo", 45)}/>
+            <Button name={"YouTubeChanel2"} callBack={()=>Button3Foo()}/>
+        </>
 
-</>
+    )
 
-    );
 }
 
 export default App;
