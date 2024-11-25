@@ -11,9 +11,6 @@ function App() {
     const Button2Foo = (name: string,age:number) => {
         console.log(name,age)
     }
-      const Button3Foo = () => {
-          console.log("iam stupid")
-      }
 
 
       const Button4Foo = (name:string, age:number, address:string) => {
@@ -27,7 +24,7 @@ function App() {
         <>
             <Button name={"YouTubeChanel1"} callBack={()=>Button1Foo("Vasia",21,"semenov")}/>
             <Button name={"YouTubeChanel2"} callBack={()=>Button2Foo("Timo", 45)}/>
-            <Button name={"stupod"} callBack={Button3Foo}/>
+
             <Button name={"newbiii"} callBack={()=>Button4Foo("peta",155,"msk")}/>
         </>
 
