@@ -1,6 +1,6 @@
 import React from "react";
 import {Button} from "./components/Button";
-import {releaseAllKeys} from "@testing-library/user-event/dist/keyboard/keyboardImplementation";
+import {log} from "node:util";
 
 
 function App() {
@@ -12,14 +12,23 @@ function App() {
         console.log(name,age)
     }
       const Button3Foo = () => {
-        console.log("iam stupedd")
+          console.log("iam stupid")
+      }
 
+
+      const Button4Foo = (name:string, age:number, address:string) => {
+        return (
+            console.log(name,age,address)
+
+        )
+      }
 
     return (
         <>
             <Button name={"YouTubeChanel1"} callBack={()=>Button1Foo("Vasia",21,"semenov")}/>
             <Button name={"YouTubeChanel2"} callBack={()=>Button2Foo("Timo", 45)}/>
-            <Button name={"YouTubeChanel2"} callBack={()=>Button3Foo()}/>
+            <Button name={"stupod"} callBack={Button3Foo}/>
+            <Button name={"newbiii"} callBack={()=>Button4Foo("peta",155,"msk")}/>
         </>
 
     )
