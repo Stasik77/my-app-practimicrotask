@@ -23,16 +23,14 @@ type ButtonType = {
 }
 
 
-export const Button = (props:ButtonType)=>{
 
-    const onClickHandler =  ()=>{
-        return(
-            props.callBack()
-        )
-
+const Button =(props: ButtonType) => {
+    const onClickHandler =()=>{
+        return props.callBack()
     }
 
-    return(
-        <button onClick={onClickHandler} type="submit">{props.name}</button>
+
+    return (
+        <button onClick={onClickHandler}>{props.name}</button>
     )
 }
